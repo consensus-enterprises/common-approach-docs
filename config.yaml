@@ -1,0 +1,49 @@
+# To configure this for deployment to gitlab pages, replace "mygroup" with your group name
+# and replace all instances of "myproject" with the name of the project.
+
+# Note : You may be tempted to change "mygroup" and "myproject" to 
+# "<GITLAB_GROUP>" or "{{GITLAB_GROUP}}" in the template. *** Don't. *** 
+# There is a format checker at some point that breaks 
+# the entire process. I've forgotten exactly where. (SLD March 2021)
+
+baseUrl: "http://mygroup.gitlab.io/"
+languageCode: "en-US"
+defaultContentLanguage: "en"
+
+title: "myproject Docs Site"
+theme: "harmony"
+metaDataFormat: "yaml"
+  #defaultContentLanguageInSubdir: true
+defaultContentLanguageInSubdir: false
+relativeURLS: true
+canonifyurls: true
+
+params:
+  editURL: "https://gitlab.com/mygroup/myproject/tree/master/docs/content/"
+  description: "Description of project docs site"
+  author: "Consensus Enterprises"
+  showVisitedLinks: true
+  disableBreadcrumb: false
+  disableNextPrev: false
+  disableSearch: false
+  disableAssetsBusting: false
+  disableInlineCopyToClipBoard: false
+  disableShortcutsTitle: false
+  disableLanguageSwitchingButton: false
+  ordersectionsby: "weight" # or "title"
+
+menu:
+  shortcuts:
+    - name: "<i class='fa fa-gitlab'></i> Gitlab repo"
+      url: "https://gitlab.com/mygroup/myproject"
+      weight: 10
+    - name: "<i class='fa fa-bullhorn'></i> Contributors"
+      url: "https://gitlab.com/mygroup/myproject/graphs/master"
+      weight: 30
+
+# For search functionality
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
