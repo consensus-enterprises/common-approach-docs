@@ -1,0 +1,6 @@
+[submodule ".mk"]
+	path = .mk
+	url = https://gitlab.com/consensus.enterprises/drumkit.git
+[submodule "themes/harmony"]
+	path = themes/harmony
+	url = https://gitlab.com/consensus.enterprises/hugo-themes/hugo-theme-harmony
